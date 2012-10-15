@@ -277,3 +277,4 @@ endef
 define add-to-product-copy-files-if-exists
 $(if $(wildcard $(word 1,$(subst :, ,$(1)))),$(1))
 endef
+
