@@ -477,7 +477,7 @@ function breakfast()
             lunch $target
         else
             # This is probably just the CM model name
-            lunch cm_$target-userdebug
+            lunch jb_$target-userdebug
         fi
     fi
     return $?
