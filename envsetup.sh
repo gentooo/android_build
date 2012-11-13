@@ -59,9 +59,9 @@ function check_product()
         return
     fi
 
-    if (echo -n $1 | grep -q -e "^cm_") ; then
-       CM_BUILD=$(echo -n $1 | sed -e 's/^cm_//g')
-       NAM_VARIANT=$(echo -n $1 | sed -e 's/^cm_//g')
+    if (echo -n $1 | grep -q -e "^jb_") ; then
+       CM_BUILD=$(echo -n $1 | sed -e 's/^jb_//g')
+       NAM_VARIANT=$(echo -n $1 | sed -e 's/^jb_//g')
     elif (echo -n $1 | grep -q -e "htc_") ; then
        CM_BUILD=
        NAM_VARIANT=$(echo -n $1)
@@ -613,7 +613,7 @@ function eat()
 {
     if [ "$OUT" ] ; then
         MODVERSION=`sed -n -e'/ro\.cm\.version/s/.*=//p' $OUT/system/build.prop`
-        ZIPFILE=cm-$MODVERSION.zip
+        ZIPFILE=jb-$MODVERSION.zip
         ZIPPATH=$OUT/$ZIPFILE
         if [ ! -f $ZIPPATH ] ; then
             echo "Nothing to eat"
